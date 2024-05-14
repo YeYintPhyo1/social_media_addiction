@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <title>Login Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"
+    ><i class="bx bxs-home"></i><span>Logo</span>
+    </a>
+    <div class="navbar_container">
+      <ul class="navbar">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="#">Tips<i class='bx bxs-down-arrow'></i></a>
+          <ul>
+            <li><a href="#" class="health">Healt</a></li>
+            <li><a href="#"  class="prevent">Prevent </a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="main">
+        <a href="login.html" class="user"><i class="bx bxs-user"></i>Login</a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+          <i class='bx bx-menu' id="menu-icon"></i>
+          <i class='bx bx-x' id="close-icon"></i>
+        </label>
+      </div>
+    </div>
+  </header>
+    <div class="con_pro">
+      <div class="container">
+        <form action="">
+            <h1 class="h1">Login</h1>
+            <div class="input">
+                <input type="text" placeholder="" required>
+                <label for="" class="floating-label">Username</label>
+                <span class="material-icons">
+                    person
+                    </span>
+            </div>
+            <div class="input">
+                <input type="password" placeholder="" required>
+                <label for="" class="floating-label">Password</label>
+                <span class="material-icons">
+                    lock
+                </span>
+            </div>
+            <div class="remember-forget">
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+            </div>
+            <button type="submit" class="sign_up">Login</button>
+            <div class="register-link">
+                Not yet a member?<a href="signup.html"> Sign Up Here</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>
