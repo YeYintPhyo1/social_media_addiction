@@ -17,12 +17,12 @@
   --secondary-color: rgba(255, 255, 255, 0.4);
 }
 body{
-  margin: 0;
-  padding: 0;
+  padding-top: 80px;
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
 }
 .navbar_container {
+  
   position: fixed;
   width: 100%;
   top: 0;
@@ -48,11 +48,17 @@ body{
   display: none;
 }
 .logo {
+  top: 0;
   position: fixed;
   display: flex;
   align-items: center;
   padding: 20px;
-  padding-left: 50px;
+  padding-left: 140px;
+  z-index: 9999;
+  color: var(--black);
+}
+.logo_h1{
+  font-size: 30px;
 }
 .logo i {
   color: var(--black);
@@ -60,7 +66,7 @@ body{
   margin-right: 3px;
 }
 .logo span {
-  color: var(--black);
+  color: var(--cyan);
   font-size: 22px;
   font-weight: 600;
 }
@@ -205,10 +211,12 @@ a{
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   margin: 20px;
   position: relative;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-left: 3px solid var(--cyan);
 }
 
 .container {
@@ -218,43 +226,7 @@ a{
   flex-wrap: wrap;
 }
 
-.top-bar{
-  width: 50%;
-  height: 4px;
-  position: absolute;
-  left: 50%;
-  top:0;
-  transform: translate(-50%);
-  background-color: var(--cyan);
-  border-radius: 0 0 10px 10px;
 
-}
-
-.verify{
-  color: #333;
-}
-
-.nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.nav .heart{
-  color: rgba(155,155,155);
-}
-
-.nav .heart:before {
-  content: '\f004';
-  font-family: fontAwesome;
-  line-height: 30px;
-  z-index: 1;
-  cursor: pointer;
-}
-.nav .heart-btn{
-  display: none;
-}
 
 .details {
   display: flex;
@@ -316,91 +288,173 @@ a{
   transition: all ease 0.1s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-/*About us with image left*/
-.about-section {
+/*about team*/
+.wrapper{
+  min-height: 50vh;
+  width: 100%;
+  background: rgb(139,143,144);
+  background: linear-gradient(315deg, rgba(139,143,144,1) 0%, rgba(68,159,212,1) 100%);
+  align-items: center;
   display: flex;
+  text-align: center;
+  
+}
+.testimonial{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 20px;
+  margin-left: 25%;
+  width: 50%;
+  border: 2px solid var(--cyan);
+  border-radius: 5px;
+  color: aliceblue;
+  text-shadow: 2px 2px 0.2em #000;
+}
+.wrapper h1{
+  font-size: 50px;
+}
+.wrapper p{
+  font-size: 20px;
   margin-right: 10%;
   margin-left: 10%;
-  background-size: 35%;
-  background-color: #ffffff;
-  overflow: hidden;
-  
-  
 }
-.pfp{
-  border-left: 5px solid var(--cyan);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.fa-regular{
+  font-size: 50px;
+  width: 70px;
+  height: 50px;
 }
-.image_container{
-  display: flex;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-right: 50px;
-  
-}
-
-.inner-container {
-  background-color: #ffffff;
-  padding: 200px 100px;
-  
-
-}
-
-.inner-container h1 {
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-weight: 900;
-}
-
-.text {
+/*footer*/
+footer {
+  width: 100%;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: #1a232e;
+  color: var(--text-color);
+  padding: 100px 0px 30px;
   font-size: 13px;
-  color: #545454;
-  line-height: 30px;
-  text-align: justify;
-  margin-bottom: 40px;
+  line-height: 20px;
 }
-
-button {
-  border: none;
-  padding: 8px 15px;
-  background-color: #333;
-  color: #fff;
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-hr{
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+.col:nth-child(2) .col:nth-child(3) {
+  flex-basis: 15%;
+}
+.logo_footer {
+  width: 80px;
+  margin-bottom: 30px;
+}
+.col h3 {
+  width: fit-content;
+  margin-bottom: 30px;
+  position: relative;
+}
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+}
+.col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+.col ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+.col ul li a:hover{
+  border-bottom: 2px solid var(--cyan);
+  width: 200px;
+  padding: 2px;
+  
+}
+form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+form .far {
+  font-size: 18px;
+  margin-right: 10px;
+}
+form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
   outline: none;
-  margin-right: 5%;
-  margin-left: 5%;
+  
 }
-@media screen and (max-width:1200px){
-  .inner-container{
-      padding: 80px;
-  }
-
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+form button .fas {
+  font-size: 16px;
+  color: #ccc;
+}
+.social-icons .fab {
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
-@media screen and (max-width:1000px){
-  .about-section{
-      background-size: 100%;
-      padding: 100px 40px;
-  }
-
-  .inner-container{
-      width: 100%;
-  }
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
 }
-
-@media screen and (max-width:600px){
-  .about-section{
-      padding: 0;
-  }
-  .inner-container{
-      padding: 60px;
-  }
+.copyright {
+  text-align: center;
 }
-@media(max-width:612px){
-  .box{
-      flex-grow: 0.7;
+.underline {
+  width: 100%;
+  height: 5px;
+  background: gainsboro;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: var(--cyan);
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
   }
 }
